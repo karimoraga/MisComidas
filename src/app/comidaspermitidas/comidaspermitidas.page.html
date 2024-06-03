@@ -1,0 +1,132 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Comidas Permitidas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Test</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+        <ion-fab-button (click)="volver()">
+            <ion-icon name="caret-back-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-card>
+        <ion-card-content>
+            Aquí tienes una lista de comidas permitidas según su caregoría:
+        </ion-card-content>
+        <h3>Cereales:</h3>
+        <ion-list>
+            <ion-item>
+                <ion-label>Arroz integral</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Pasta integral</ion-label>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Pan integral</ion-label>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Avena</ion-label>
+
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Fajitas</ion-label>
+
+            </ion-item>
+            
+            
+        </ion-list>
+
+        <h3>Proteinas:</h3>
+        <ion-list>
+            <ion-item>
+                <ion-label>Carne de Soja</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Clara de huevo</ion-label>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Pollo</ion-label>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Pescado</ion-label>
+
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Carnes Magras</ion-label>
+
+            </ion-item>
+            
+        </ion-list>
+
+        <h3>Verduras y tubérculos:</h3>
+        <ion-list>
+            <ion-item>
+                <ion-label>Pepino</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Hojas verdes (lechuga, rúcula, acelga, espinaca, etc)</ion-label>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Apio</ion-label>
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Papa</ion-label>
+
+            </ion-item>
+            <ion-item>
+
+                <ion-label>Zanahoria</ion-label>
+            </ion-item>
+           <ion-item>
+
+              <ion-label>Beterraga</ion-label>
+    
+
+
+            </ion-item>
+            
+        </ion-list>
+        <ion-card-content>
+            Las siguientes frutas se recomienda ingerirlas cocidas y sin azúcar, solo endulzante:
+        </ion-card-content>
+        <h3>Frutas:</h3>
+        <ion-list>
+            <ion-item>
+                <ion-label>Manzana</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Pera</ion-label>
+            </ion-item>
+        </ion-list>
+
+        <h3>Bebidas:</h3>
+        <ion-list>
+            <ion-item>
+                <ion-label>Té verde</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Manzanilla</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Agua saborizada de fruta sin gas</ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+
+</ion-content>

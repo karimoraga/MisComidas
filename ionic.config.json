@@ -1,0 +1,7 @@
+{
+  "name": "MisComidas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,117 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Comidas Prohibidas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+      <ion-header collapse="condense">
+          <ion-toolbar>
+              <ion-title size="large">Test</ion-title>
+          </ion-toolbar>
+      </ion-header>
+  
+      <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+        <ion-fab-button (click)="volver()">
+            <ion-icon name="caret-back-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+      <ion-card>
+          <ion-card-content>
+              Aquí tienes una lista de comidas <b><i>que debes evitar</i></b> según su caregoría:
+          </ion-card-content>
+          <h3>Cereales:</h3>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Arroz blanco, solo ingerir con moderación</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Pastas</ion-label>
+              </ion-item>
+              <ion-item>
+  
+                  <ion-label>Pan blanco</ion-label>
+              </ion-item>
+              <ion-item>
+  
+                  <ion-label>Galletas pesadas (Consumir solo con moderación)</ion-label>
+  
+              </ion-item>
+
+              
+              
+          </ion-list>
+  
+          <h3>Proteinas:</h3>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Carnes procesadas (Hamburguesas, vienesas, jamón, salame, etc)</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Yema de huevo</ion-label>
+              </ion-item>
+              <ion-item>
+  
+                  <ion-label>Carne de cerdo</ion-label>
+              </ion-item>
+              <ion-item>
+  
+                  <ion-label>Carnes grasas</ion-label>
+  
+              </ion-item>
+
+              
+          </ion-list>
+  
+          <h3>Verduras y tubérculos:</h3>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Coliflor</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Brócoli</ion-label>
+              </ion-item>
+              <ion-item>
+  
+                  <ion-label>Repollo</ion-label>
+              </ion-item>
+
+              
+          </ion-list>
+
+          <h3>Frutas:</h3>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Frutas con semilla (Frutilla, arándanos, higos, etc)</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Platano</ion-label>
+              </ion-item>
+          </ion-list>
+  
+          <h3>Bebidas:</h3>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Gaseosas</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Alcohol</ion-label>
+              </ion-item>
+          </ion-list>
+
+          <h3>Extras y sugerencias:</h3>
+          <ion-list>
+              <ion-item>
+                  <ion-label>Evitar fritura</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Evitar condimentos en exceso</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Evitar comida rápida</ion-label>
+            </ion-item>
+          </ion-list>
+
+      </ion-card>
+  </ion-content>
