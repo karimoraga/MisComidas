@@ -5,28 +5,22 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
-   <ion-card #card>
-    
-    <ion-card-title><h3>Bienvenido {{ usuario }}</h3></ion-card-title>
-   <ion-card-content>
+    <ion-card #card>
+      <ion-card-title><h3>Hola {{ usuario }}</h3></ion-card-title>
       <ion-card-content> Acá podrás navegar por las secciones disponibles en la APP. Recuerda que consiste en una lista de sugerencias para cuidar la alimentación de pacientes con problemas gástricos agudos o post operatorios</ion-card-content>
-
-    
-      </ion-card-content>
-      
       <ion-button expand="block" (click)="comidaspermitidas()">Alimentos Permitidos</ion-button>
       <ion-button expand="block" (click)="comidasprohibidas()">Alimentos a evitar</ion-button>
       <ion-button expand="block" (click)="platossugeridos()">Platos sugeridos</ion-button>
-
-   </ion-card>
+    </ion-card>
+    <ion-card>
+      <ion-button expand="block" (click)="logout()">Cerrar Sesión</ion-button>
+    </ion-card>
   </div>
 </ion-content>

@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-item>
+        <ion-input label="Nombre" label-placement="fixed" [(ngModel)]="nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input label="Username" label-placement="fixed" [(ngModel)]="username" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input label="Password" label-placement="fixed" [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-button expand="block" ng-click="registrarse()" (click)="registrarse()">Registrarse</ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>

@@ -19,86 +19,34 @@
       
       <ion-card>
           <ion-card-content>
-              Aquí tienes una lista de platos <b><i>puedes elegir</i></b> según corresponda:
-          </ion-card-content>
-          <h3>Desayuno:</h3>
-          <ion-list>
-              <ion-item>
-                  <ion-label>Una fruta (Pera o manzana)</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Cereales (Escoger  uno): 1/2 taza de cereal, o 2 masas pequeñas de fajita, 2 rebanadas de pan de molde integral, acompañamiento: mermelada, queso fresco</ion-label>
-              </ion-item>
-              <ion-item>
-  
-                  <ion-label>Lácteos (sin lactosa) 1 yogurt, o una taza de leche</ion-label>
-              </ion-item>
-              <ion-item>
-  
-                  <ion-label>Otros: Café descafeinado, té verde, té de manzanilla</ion-label>
-  
-              </ion-item>
+              Acá puedes encontrar una búsqueda excluyendo los alimentos que no puedes consumir:
+        </ion-card-content>
+        <ion-item>
+          <ion-input label="Calorías" label-placement="stacked" [(ngModel)]="calories" type="text" maxlength="8" minlength="3"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Tipo de dieta" label-placement="stacked" placeholder="Tipo" [(ngModel)]="diet" value="whole30">
+            <ion-select-option value="whole30">Omnivoro</ion-select-option>
+            <ion-select-option value="vegetarian">Vegetariano</ion-select-option>
+            <ion-select-option value="glutenfree">Sin gluten</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button expand="block" (click)="sugerir()">Sugerir</ion-button>
+        </ion-item>
+      </ion-card>
 
-              
-              
-          </ion-list>
-  
-          <h3>Almuerzo:</h3>
-          <ion-list>
-              <ion-item>
-                  <ion-label>Cereales (Escoger uno): 1 taza de arroz integral, 1 taza de pasta integral, 1 papa, 1 masa de fajita grande</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Proteína (Escoger una): 1 taza de carne de soja con champiñones, 1 taza de carne de soja con verduras, 2 huevos (sin yema), 1.5 taza de legumbres, o alguna de las carnes mencionadas en las comidas permitidas, preparadas al horno o plancha</ion-label>
-              </ion-item>
-              <ion-item>
-  
-                  <ion-label>Ensalada a libre elección, según lista</ion-label>
-              </ion-item>
-  
-
-              
-          </ion-list>
-  
-          <h3>Cena u once:</h3>
-          <ion-list>
-              <ion-item>
-                  <ion-label>Cereales (Elegir uno): 4 rebanadas de pan integral, 2 pan pita, 2 fajitas medianas </ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Proteinas (Elegir una): Quesillo, huevo</ion-label>
-              </ion-item>
-              <ion-item>
-  
-                  <ion-label>Verdura: Tomate (sin semillas) para acompañar el pan, 1/2 taza de zanahoria</ion-label>
-              </ion-item>
-
-              
-          </ion-list>
-
-          <h3>Snacks para colación:</h3>
-          <ion-list>
-              <ion-item>
-                  <ion-label>Lácteos sin lactosa: yogurt, o leche</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Frutas (Escoger una): Manzana, pera</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>3 cucharadas de maní</ion-label>
-            </ion-item>
-          </ion-list>
-  
-
-          <h3>Extras y sugerencias:</h3>
-          <ion-list>
-              <ion-item>
-                  <ion-label>Tomar una colación a media mañana o media tarde</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Consumir media zanahoria en caso de reflujo</ion-label>
-              </ion-item>
-          </ion-list>
-
+      <ion-card>
+        <ion-card-content>{{ title }}</ion-card-content>
+        <ion-card-content *ngIf="finished">
+          <ion-item *ngFor="let meal of response.meals" href="{{ meal.sourceUrl }}" target="_blank">
+            <ion-label>
+              <h2>{{ meal.title }}</h2>
+              <p>Tiempo de preparación: {{ meal.readyInMinutes }} minutos</p>
+              <p>Porciones: {{ meal.servings }}</p>
+              <img src="https://img.spoonacular.com/recipes/{{ meal.id }}-312x231.{{ meal.imageType }}" width="312" height="231">
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
       </ion-card>
   </ion-content>
